@@ -1,0 +1,30 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "tabWidth": 2,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^react(.*)",
+    "^next(.*)",
+    "^formik(.*)",
+    "^redux(.*)",
+    "^yup(.*)",
+    "^dayjs(.*)",
+    "@mui/(.*)",
+    "@reduxjs/(.*)",
+    "@/components/(.*)",
+    "@/types/(.*)",
+    "@/services/(.*)",
+    "@/pages/(.*)",
+    "@/app/(.*)",
+    "@/features/(.*)",
+    "@/utils/(.*)",
+    "@/assets/(.*)",
+    "@/(.css)",
+    "@/(.scss)",
+    "@/(.*)",
+    "^[./]"
+  ]
+}
