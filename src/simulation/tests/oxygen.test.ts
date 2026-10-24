@@ -53,13 +53,11 @@ describe('oxygen mechanics', () => {
       expect(tickOxygen(cap - 5, reducedMax, true)).toBe(cap);
     });
 
-    it('should scale the cap back up when soda restores oxygenMax', () => {
+    it('should cap safe-room regen proportionally to oxygenMax', () => {
       const oxygen = 40;
 
-      // one penalty active: max at 90, regen cap at 45
-      expect(tickOxygen(oxygen, 90, true)).toBe(45);
-      // soda removed penalty, max back at 100, regen cap at 50
-      expect(tickOxygen(oxygen, 100, true)).toBe(50);
+      expect(tickOxygen(oxygen, 90, true)).toBe(45); // cap 45, regen would reach 50
+      expect(tickOxygen(oxygen, 100, true)).toBe(50); // cap 50, regen reaches 50
     });
   });
 
